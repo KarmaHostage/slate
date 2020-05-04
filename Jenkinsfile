@@ -10,5 +10,10 @@ pipeline {
                 sh './ci/build.sh'
             }
         }
+        stage('Push Docker') {
+            steps {
+              sh './ci/push.sh'
+            }
+        }
     }
 }
