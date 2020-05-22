@@ -11,6 +11,8 @@ toc_footers:
 
 includes:
   - keys
+  - encrypt
+  - decrypt
   - errors
 
 search: true
