@@ -5,6 +5,8 @@
 ```http
 POST https://api.karmahostage.com/encrypt
 X-API-KEY: "sk_xxx"
+Content-Type: application/json
+
 {
   "plainText":"my secret text",
   "keyId":"e4dea538-37d3-40df-99a7-da9992d3300c"
@@ -20,6 +22,7 @@ karmahostage.keys()
 ```shell
 curl "http://api.karmahostage.com/encrypt"
   -H "X-API-KEY: sk_xxx"
+  -H "Content-Type: application/json"
   -x POST
   -d '{"keyId":"e4dea538-37d3-40df-99a7-da9992d3300c", "plainText":"my secret text"}'
 ```

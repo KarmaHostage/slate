@@ -22,7 +22,7 @@ curl "http://api.karmahostage.com/keys"
 ```json
 [
   {
-    "id": 1,
+    "id": "e4dea538-37d3-40df-99a7-da9992d3300c",
     "name": "My Secret Cryptographic Key",
     "description": "My key that I'll use for secret things",
     "creationDate": "2020-02-18 20:21",
@@ -48,7 +48,7 @@ X-API-KEY: "sk_xxx"
 
 ```java
 karmahostage.keys()
-            .retrieve(keyId)
+            .retrieve("e4dea538-37d3-40df-99a7-da9992d3300c")
 ```
 
 ```shell
@@ -60,7 +60,7 @@ curl "http://api.karmahostage.com/keys/$key_id"
 
 ```json
   {
-    "id": 1,
+    "id": "e4dea538-37d3-40df-99a7-da9992d3300c",
     "name": "My Secret Cryptographic Key",
     "description": "My key that I'll use for secret things",
     "creationDate": "2020-02-18 20:21",
