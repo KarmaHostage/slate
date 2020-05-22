@@ -3,6 +3,7 @@ title: Karmahostage API Documentation
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - http
+  - java
   - shell
 
 toc_footers:
@@ -32,10 +33,18 @@ GET http://api.karmahostage.com/keys
 X-API-KEY: sk_XXX
 ```
 
+```java
+Karmahostage karmahostage = 
+    Karmahostage.builder()
+                .apikey("sk_...")
+                .build();
+```
+
 ```shell
 curl "https://api.karmahostage.com"
   -H "X-API-KEY: sk_xxx"
 ```
+
 
 > Make sure to replace `sk_xxx` with the api key that you generated using https://dashboard.karmahostage.com
 
