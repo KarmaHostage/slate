@@ -73,3 +73,28 @@ curl "http://api.karmahostage.com/keys/$key_id"
     "derived": false
   }
 ```
+
+## Rotate a key
+
+```http
+POST https://api.karmahostage.com/keys/e4dea538-37d3-40df-99a7-da9992d3300c/rotate
+X-API-KEY: "sk_xxx"
+```
+
+```java
+   //TODO: Not Implemented Yet
+```
+
+```shell
+curl "http://api.karmahostage.com/keys/e4dea538-37d3-40df-99a7-da9992d3300c/rotate"
+  -H "X-API-KEY: sk_xxx"
+  -H "Content-Type: application/json"
+  -x POST
+```
+
+> This returns a response with status 200: OK
+
+Keys can be updated by simply using the **rotating** operation. 
+
+This will generate a new encryption key and add it to the keyring for the named key.
+Future encryptions will use the new key. Old data can still be decrypted, because of the keyring. 
