@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker push qkyrie/karmahostage-rest-docs
+docker push qkyrie/karmahostage-rest-docs:${BRANCH_NAME}

@@ -15,5 +15,18 @@ pipeline {
               sh './ci/push.sh'
             }
         }
+        stage('Deploy') {
+           when {
+            allOf {
+              branch 'master'
+            }
+           }
+          steps {
+            sh './ci/tag-for-deployment.sh'
+            sshagent(credentials: ['jenkins-server-login']) {
+              sh 'ssh -t -t jenkins@138.201.152.78 -o StrictHostKeyChecking=no "sh rest-docs.sh"'
+            }
+          }
+        }
     }
 }
