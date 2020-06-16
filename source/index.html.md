@@ -13,6 +13,7 @@ includes:
   - keys
   - encrypt
   - decrypt
+  - secrets
   - errors
 
 search: true
