@@ -16,11 +16,6 @@ pipeline {
             }
         }
         stage('Deploy') {
-           when {
-            allOf {
-              branch 'master'
-            }
-           }
           steps {
             sh './ci/tag-for-deployment.sh'
             sshagent(credentials: ['jenkins-server-login']) {
