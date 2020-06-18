@@ -1,5 +1,33 @@
 # Keys
 
+## Create a Cryptographic key
+
+```http
+POST https://api.karmahostage.com/keys
+X-API-KEY: "sk_xxx"
+
+{
+    "name": "name_of_the_key",
+    "keyType": "AES128_GCM96"
+}
+```
+
+```shell
+curl "http://api.karmahostage.com/keys"
+  -H "X-API-KEY: sk_xxx"
+  -x POST
+  -d "{ "name": "name_of_the_key", "keyType": "AES128_GCM96"}"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+  {
+    "id": "e4dea538-37d3-40df-99a7-da9992d3300c"
+  } 
+```
+
+
 ## Get All Cryptographic keys
 
 ```http
